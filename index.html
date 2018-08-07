@@ -1,22 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Surf Cam</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <title>Surf Cam</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
-    <link rel="stylesheet" href="../dist/airplay/airplay.css">
-    <link rel="stylesheet" href="demo.css">
 </head>
 <body>
     <div id="container">
 
-        <h1>Surf Cam</h1>
+        <h1>Surf Cam: Eastern beaches</h1>
 
         <div id="out-contain">
             <iframe id="output" frameborder="0" height="175" width="400"></iframe>
@@ -49,12 +42,10 @@
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js"></script>
-    <script src="../dist/airplay/airplay.js"></script>
     <script>
 	    var player1 = new MediaElementPlayer('player1', { 
             pauseOtherPlayers: false,
             features: ['fullscreen'],
-            autoplay: true,
         });
 
         var player2 = new MediaElementPlayer('player2', {
