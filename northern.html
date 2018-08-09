@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Surf Cam</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
+</head>
+<body>
+    <div id="container">
+
+        <h1>Surf Cam: Northern beaches</h1>
+        <a href="./eastern.html">View Eastern beaches</a>
+
+        <p>
+
+        <div id="out-contain">
+            <iframe id="output" frameborder="0" height="175" width="400"></iframe>
+        </div>
+
+        <div class="media-wrapper">
+            Manly
+            <video id="player1" width="480" height="270">
+                <source src="https://streamer.swellnet.com.au/surfcams/manly.stream/chunklist_w1742144059.m3u8" type="application/x-mpegURL">
+            </video>
+        </div>
+
+        <p>
+
+        <div class="media-wrapper">
+            Manly - Fairy Bower
+            <video id="player2" width="480" height="270">
+                <source src="https://cf-stream.coastalwatch.com/cw/manlybowercamera.stream/chunklist.m3u8" type="application/x-mpegURL">
+            </video>
+        </div>
+
+        <p>
+
+        <div class="media-wrapper">
+            Manly - Hotel Steyne
+            <video id="player3" width="480" height="270">
+                <source src="https://cf-stream.coastalwatch.com/cw/sthsteynecamera.stream/chunklist.m3u8" type="application/x-mpegURL">
+            </video>
+        </div>
+
+        <p>
+
+        <div class="media-wrapper">
+            Manly - North Steyne
+            <video id="player4" width="480" height="270">
+                <source src="https://cf-stream.coastalwatch.com/cw/manlycamerahd.stream/chunklist.m3u8" type="application/x-mpegURL">
+            </video>
+        </div>
+
+        <p>
+
+        <div class="media-wrapper">
+            Curl Curl
+            <video id="player5" width="480" height="270">
+                <source src="https://cf-stream.coastalwatch.com/cw/curlcurlcamera.stream/chunklist.m3u8" type="application/x-mpegURL">
+            </video>
+        </div>
+
+        <p>
+
+        <div class="media-wrapper">
+            Dee Why
+            <video id="player6" width="480" height="270">
+                <source src="https://cf-stream.coastalwatch.com/cw/deewhycamera.stream/chunklist.m3u8" type="application/x-mpegURL">
+            </video>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js"></script>
+    <script>
+	    var player1 = new MediaElementPlayer('player1', { 
+            pauseOtherPlayers: false,
+            features: ['fullscreen'],
+        });
+
+        var player2 = new MediaElementPlayer('player2', {
+            pauseOtherPlayers: false,
+            features: ['fullscreen'],
+        });
+     
+        var player3 = new MediaElementPlayer('player3', {
+            pauseOtherPlayers: false,
+            features: ['fullscreen'],
+        });
+
+        var player4 = new MediaElementPlayer('player4', {
+            pauseOtherPlayers: false,
+            features: ['fullscreen'],
+        });
+
+        var player5 = new MediaElementPlayer('player5', {
+            pauseOtherPlayers: false,
+            features: ['fullscreen'],
+        });
+
+        var player6 = new MediaElementPlayer('player6', {
+            pauseOtherPlayers: false,
+            features: ['fullscreen'],
+        });
+
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+
+        doc = $("#output")[0].contentDocument;
+        doc.open();
+        doc.writeln("Loading surf report...");
+        doc.close();
+
+        var jsonpText = "";
+        jsonpText = $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://www.swellnet.com/reports/australia/new-south-wales/northern-beaches') + '&callback=?', function(data){
+
+                var str = null;
+                str = data.contents.split('Surf:');
+                str = str[1].split('</span>');
+                str = str[1].split('>');
+                var surf =  str[1];
+                //alert(surf);
+
+                var str = null;
+                str = data.contents.split('Winds:');
+                str = str[1].split('</span>');
+                str = str[1].split('>');
+                var winds = str[1];
+                //alert(winds);
+                
+                var str = null;
+                str = data.contents.split('Weather:');
+                str = str[1].split('</span>');
+                str = str[1].split('>');
+                var weather = str[1];
+                //alert(weather);
+
+                var str = null;
+                str = data.contents.split('Rating:');
+                str = str[1].split('</span>');
+                str = str[1].split('>');
+                var rating = str[1];
+                //alert(rating);
+
+                var str = null;
+                str = data.contents.split('views-field views-field-body');
+                str = str[1].split('<p>');
+                str = str[1].split('</p>');
+                var report = str[0];
+                //alert(report);
+
+                var fullReport = 
+                    "Surf: " + surf + "<br>" +
+                    "Winds: " + winds + "<br>" +
+                    "Weather: " + weather + "<br>" +
+                    "Rating: " + rating + "<br>" +
+                    report;
+                //alert(fullReport);
+
+                doc.open();
+                doc.writeln(fullReport);
+                doc.close();
+            }
+        );
+    </script>
+</body>
+</html>
