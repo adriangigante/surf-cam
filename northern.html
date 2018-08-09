@@ -16,18 +16,29 @@
 
     <title>Surf Cam</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google Sans">
+    <style>
+      body {
+        font-family: 'Google Sans', sans-serif; 
+      }
+    </style>
 </head>
 <body>
     <div id="container">
 
-        <h1>Surf Cam: Northern beaches</h1>
-        <a href="./eastern.html">View Eastern beaches</a>
+        <div id="title" >
+            <h2>Surf Cam</h2>
+            <h3>Northern beaches</h3>
+            <a href="./eastern.html">View Eastern beaches</a>
+        </div>
 
         <p>
-
-        <div id="out-contain">
-            <iframe id="output" frameborder="0" height="175" width="480"></iframe>
+            
+        <div id="div-report" style="height:175px; width:480px;" >
+            Loading report...
         </div>
+
+        <p>
 
         <div class="media-wrapper">
             Manly
@@ -120,11 +131,6 @@
 
     <script>
 
-        doc = $("#output")[0].contentDocument;
-        doc.open();
-        doc.writeln("Loading surf report...");
-        doc.close();
-
         var jsonpText = "";
         jsonpText = $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://www.swellnet.com/reports/australia/new-south-wales/northern-beaches') + '&callback=?', function(data){
 
@@ -167,13 +173,12 @@
                     "Surf: " + surf + "<br>" +
                     "Winds: " + winds + "<br>" +
                     "Weather: " + weather + "<br>" +
-                    "Rating: " + rating + "<br>" +
+                    "Rating: " + rating + "<br><br>" +
                     report;
                 //alert(fullReport);
 
-                doc.open();
-                doc.writeln(fullReport);
-                doc.close();
+                $("#div-report" ).html(fullReport);
+
             }
         );
     </script>
