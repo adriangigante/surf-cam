@@ -16,62 +16,68 @@
 
     <title>Surf Cam</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google Sans">
-    <style>
-      body {
-        font-family: 'Google Sans', sans-serif; 
-      }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
+
 </head>
 <body>
     <div id="container">
 
-        <div id="title">
-            <h2>Surf Cam</h2>
-            <h3>Eastern beaches</h3>
-            <a href="./northern.html">View Northern beaches</a>
+        <div id="div-title">
+            <h1 style="color: #ffffff">Surf Cam</h1>
         </div>
 
-        <p>
-            
-        <div id="div-report" style="height:175px; width:480px;" >
-            Loading report...
+        <div id="div-subtitle" style="padding: 4px">
+            <text id="header-beach">Eastern beaches</text>
+            <br>
+            <a href="./northern.html" style="padding:1px">View Northern beaches</a>
         </div>
 
-        <p>
-
-        <div class="media-wrapper">
-            Bondi South
-            <video id="player1" width="480" height="270">
-                <source src="https://cf-stream.coastalwatch.com/cw/bondicamera.stream/chunklist_w640007274.m3u8" type="application/x-mpegURL">
-            </video>
+        <br>
+        
+        <div style="padding:4px">
+            <text style="font-size: 16px; font-weight: bold;">Surf report</text>    
+            <div id="div-report">
+                Loading report...
+            </div>
         </div>
-
         <p>
 
-        <div class="media-wrapper">
-            Bondi North
-            <video id="player2" width="480" height="270">
-                <source src="https://cf-stream.coastalwatch.com/cw/nbondicamera.stream/playlist.m3u8" type="application/x-mpegURL">
-            </video>
-        </div>
+        <div style="padding:4px">  
 
-        <p>
+            <div class="media-wrapper">
+                <text id="header-camera">Bondi South</text>
+                <video id="player1" width="480" height="270">
+                    <source src="https://cf-stream.coastalwatch.com/cw/bondicamera.stream/chunklist_w640007274.m3u8" type="application/x-mpegURL">
+                </video>
+            </div>
 
-        <div class="media-wrapper">
-            Maroubra I
-            <video id="player3" width="480" height="270">
-                <source src="https://cf-stream.coastalwatch.com/cw/maroubracamera.stream/chunklist.m3u8" type="application/x-mpegURL">
-            </video>
-        </div>
+            <p>
 
-        <p>
+            <div class="media-wrapper">
+                <text id="header-camera">Bondi North</text>
+                <video id="player2" width="480" height="270">
+                    <source src="https://cf-stream.coastalwatch.com/cw/nbondicamera.stream/playlist.m3u8" type="application/x-mpegURL">
+                </video>
+            </div>
 
-        <div class="media-wrapper">
-            Maroubra II
-            <video id="player4" width="480" height="270">
-                <source src="https://streamer.swellnet.com.au/surfcams/maroubra.stream/chunklist_w712526132.m3u8" type="application/x-mpegURL">
-            </video>
+            <p>
+
+            <div class="media-wrapper">
+                <text id="header-camera">Maroubra I</text>
+                <video id="player3" width="480" height="270">
+                    <source src="https://cf-stream.coastalwatch.com/cw/maroubracamera.stream/chunklist.m3u8" type="application/x-mpegURL">
+                </video>
+            </div>
+
+            <p>
+
+            <div class="media-wrapper">
+                <text id="header-camera">Maroubra II
+                <video id="player4" width="480" height="270">
+                    <source src="https://streamer.swellnet.com.au/surfcams/maroubra.stream/chunklist_w712526132.m3u8" type="application/x-mpegURL">
+                </video>
+            </div>
+
         </div>
 
     </div>
@@ -150,7 +156,7 @@
                 //alert(fullReport);
 
                 $("#div-report" ).html(fullReport);
-                
+
             }
         );
     </script>

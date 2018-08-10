@@ -16,81 +16,87 @@
 
     <title>Surf Cam</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google Sans">
-    <style>
-      body {
-        font-family: 'Google Sans', sans-serif; 
-      }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
+
 </head>
 <body>
     <div id="container">
 
-        <div id="title" >
-            <h2>Surf Cam</h2>
-            <h3>Northern beaches</h3>
-            <a href="./eastern.html">View Eastern beaches</a>
+         <div id="div-title">
+            <h1 style="color: #ffffff">Surf Cam</h1>
         </div>
 
-        <p>
-            
-        <div id="div-report" style="height:175px; width:480px;" >
-            Loading report...
+        <div id="div-subtitle" style="padding: 4px">
+            <text id="header-beach">Northern beaches</text>
+            <br>
+            <a href="./eastern.html" style="padding:1px">View Eastern beaches</a>
         </div>
 
-        <p>
-
-        <div class="media-wrapper">
-            Manly
-            <video id="player1" width="480" height="270">
-                <source src="https://streamer.swellnet.com.au/surfcams/manly.stream/chunklist_w1742144059.m3u8" type="application/x-mpegURL">
-            </video>
+        <br>
+        
+        <div style="padding:4px">
+            <text style="font-size: 16px; font-weight: bold;">Surf report</text>    
+            <div id="div-report">
+                Loading report...
+            </div>
         </div>
-
         <p>
 
-        <div class="media-wrapper">
-            Manly - Fairy Bower
-            <video id="player2" width="480" height="270">
-                <source src="https://cf-stream.coastalwatch.com/cw/manlybowercamera.stream/chunklist.m3u8" type="application/x-mpegURL">
-            </video>
+        <div style="padding:4px">
+            <div class="media-wrapper">
+                <text id="header-camera">Manly</text>
+                <video id="player1" width="480" height="270">
+                    <source src="https://streamer.swellnet.com.au/surfcams/manly.stream/chunklist_w1742144059.m3u8" type="application/x-mpegURL">
+                </video>
+            </div>
+
+            <p>
+
+            <div class="media-wrapper">
+                <text id="header-camera">Manly - Fairy Bower</text>
+                <video id="player2" width="480" height="270">
+                    <source src="https://cf-stream.coastalwatch.com/cw/manlybowercamera.stream/chunklist.m3u8" type="application/x-mpegURL">
+                </video>
+            </div>
+
+            <p>
+
+            <div class="media-wrapper">
+                <text id="header-camera">Manly - Hotel Steyne</text>
+                <video id="player3" width="480" height="270">
+                    <source src="https://cf-stream.coastalwatch.com/cw/sthsteynecamera.stream/chunklist.m3u8" type="application/x-mpegURL">
+                </video>
+            </div>
+
+            <p>
+
+            <div class="media-wrapper">
+                <text id="header-camera">Manly - North Steyne</text>
+                <video id="player4" width="480" height="270">
+                    <source src="https://cf-stream.coastalwatch.com/cw/manlycamerahd.stream/chunklist.m3u8" type="application/x-mpegURL">
+                </video>
+            </div>
+
+            <p>
+
+            <div class="media-wrapper">
+                <text id="header-camera">Curl Curl</text>
+                <video id="player5" width="480" height="270">
+                    <source src="https://cf-stream.coastalwatch.com/cw/curlcurlcamera.stream/chunklist.m3u8" type="application/x-mpegURL">
+                </video>
+            </div>
+
+            <p>
+
+            <div class="media-wrapper">
+                <text id="header-camera">Dee Why</text>
+                <video id="player6" width="480" height="270">
+                    <source src="https://cf-stream.coastalwatch.com/cw/deewhycamera.stream/chunklist.m3u8" type="application/x-mpegURL">
+                </video>
+            </div>
+
         </div>
 
-        <p>
-
-        <div class="media-wrapper">
-            Manly - Hotel Steyne
-            <video id="player3" width="480" height="270">
-                <source src="https://cf-stream.coastalwatch.com/cw/sthsteynecamera.stream/chunklist.m3u8" type="application/x-mpegURL">
-            </video>
-        </div>
-
-        <p>
-
-        <div class="media-wrapper">
-            Manly - North Steyne
-            <video id="player4" width="480" height="270">
-                <source src="https://cf-stream.coastalwatch.com/cw/manlycamerahd.stream/chunklist.m3u8" type="application/x-mpegURL">
-            </video>
-        </div>
-
-        <p>
-
-        <div class="media-wrapper">
-            Curl Curl
-            <video id="player5" width="480" height="270">
-                <source src="https://cf-stream.coastalwatch.com/cw/curlcurlcamera.stream/chunklist.m3u8" type="application/x-mpegURL">
-            </video>
-        </div>
-
-        <p>
-
-        <div class="media-wrapper">
-            Dee Why
-            <video id="player6" width="480" height="270">
-                <source src="https://cf-stream.coastalwatch.com/cw/deewhycamera.stream/chunklist.m3u8" type="application/x-mpegURL">
-            </video>
-        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js"></script>
