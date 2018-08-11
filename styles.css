@@ -79,7 +79,7 @@ object-fit: fill;
   and (orientation: portrait) {
     #div-report {
 		background-color: #ffffff;
-		width:320px;
+		width:312px;
 		padding:1px;
 		border:1px solid #dddfe2
 	}
