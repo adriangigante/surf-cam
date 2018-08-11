@@ -81,6 +81,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js"></script>
     <script>
+
 	    var player1 = new MediaElementPlayer('player1', { 
             pauseOtherPlayers: false,
             features: ['fullscreen'],
@@ -112,51 +113,60 @@
 
                 var str = null;
                 str = data.contents.split('Surf:');
-                str = str[1].split('</span>');
-                str = str[1].split('>');
-                var surf =  str[1];
-                //alert(surf);
+                if ((str.length) > 1) {
 
-                var str = null;
-                str = data.contents.split('Winds:');
-                str = str[1].split('</span>');
-                str = str[1].split('>');
-                var winds = str[1];
-                //alert(winds);
-                
-                var str = null;
-                str = data.contents.split('Weather:');
-                str = str[1].split('</span>');
-                str = str[1].split('>');
-                var weather = str[1];
-                //alert(weather);
+                    str = str[1].split('</span>');
+                    str = str[1].split('>');
+                    var surf =  str[1];
+                    //alert(surf);
 
-                var str = null;
-                str = data.contents.split('Rating:');
-                str = str[1].split('</span>');
-                str = str[1].split('>');
-                var rating = str[1];
-                //alert(rating);
+                    var str = null;
+                    str = data.contents.split('Winds:');
+                    str = str[1].split('</span>');
+                    str = str[1].split('>');
+                    var winds = str[1];
+                    //alert(winds);
+                    
+                    var str = null;
+                    str = data.contents.split('Weather:');
+                    str = str[1].split('</span>');
+                    str = str[1].split('>');
+                    var weather = str[1];
+                    //alert(weather);
 
-                var str = null;
-                str = data.contents.split('views-field views-field-body');
-                str = str[1].split('<p>');
-                str = str[1].split('</p>');
-                var report = str[0];
-                //alert(report);
+                    var str = null;
+                    str = data.contents.split('Rating:');
+                    str = str[1].split('</span>');
+                    str = str[1].split('>');
+                    var rating = str[1];
+                    //alert(rating);
 
-                var fullReport = 
-                    "Surf: " + surf + "<br>" +
-                    "Winds: " + winds + "<br>" +
-                    "Weather: " + weather + "<br>" +
-                    "Rating: " + rating + "<br><br>" +
-                    report;
-                //alert(fullReport);
+                    var str = null;
+                    str = data.contents.split('views-field views-field-body');
+                    str = str[1].split('<p>');
+                    str = str[1].split('</p>');
+                    var report = str[0];
+                    //alert(report);
 
-                $("#div-report" ).html(fullReport);
+                    var fullReport = 
+                        "Surf: " + surf + "<br>" +
+                        "Winds: " + winds + "<br>" +
+                        "Weather: " + weather + "<br>" +
+                        "Rating: " + rating + "<br><br>" +
+                        report;
+                    //alert(fullReport);
+
+                    $("#div-report" ).html(fullReport);
+
+                } else {
+
+                    $("#div-report" ).html("Too early! Nothing to report yet.");
+
+                }
 
             }
         );
+        
     </script>
 </body>
 </html>
