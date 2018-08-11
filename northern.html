@@ -25,10 +25,9 @@
             <h1 style="color: #ffffff">Surf Cam</h1>
         </div>
 
-        <div id="div-subtitle" style="padding: 4px">
-            <text id="header-beach">Northern beaches</text>
-            <br>
-            <a href="./eastern.html" style="padding:1px">View Eastern beaches</a>
+        <div class="topnav">
+            <a href="./eastern.html">EASTERN</a>
+            <a class="active" href="./northern.html">NORTHERN</a>
         </div>
 
         <br>
@@ -95,6 +94,49 @@
                 </video>
             </div>
 
+            <p>
+
+            <div class="media-wrapper">
+                <text id="header-camera">Narrabeen - South</text>
+                <video id="player7" width="480" height="270">
+                    <source src="https://cf-stream.coastalwatch.com/cw/sthnarrabeencamera.stream/chunklist.m3u8" type="application/x-mpegURL">
+                </video>
+            </div>
+
+            <p>
+
+            <div class="media-wrapper">
+                <text id="header-camera">Narrabeen I</text>
+                <video id="player8" width="480" height="270">
+                    <source src="https://cf-stream.coastalwatch.com/cw/narrabeencamera.stream/chunklist.m3u8" type="application/x-mpegURL">
+                </video>
+            </div>
+
+            <p>
+
+            <div class="media-wrapper">
+                <text id="header-camera">Narrabeen II</text>
+                <video id="player9" width="480" height="270">
+                    <source src="https://streamer.swellnet.com.au/surfcams/narrabeen.stream/chunklist_w1198370824.m3u8" type="application/x-mpegURL">
+                </video>
+            </div>
+
+            <p>
+
+            <div class="media-wrapper">
+                <text id="header-camera">Avalon</text>
+                <video id="player10" width="480" height="270">
+                    <source src="https://cf-stream.coastalwatch.com/cw/avaloncamera.stream/chunklist.m3u8" type="application/x-mpegURL">
+                </video>
+            </div>
+
+            <div class="media-wrapper">
+                <text id="header-camera">Palm Beach</text>
+                <video id="player11" width="480" height="270">
+                    <source src="https://cf-stream.coastalwatch.com/cw/palmbeachcamera.stream/chunklist.m3u8" type="application/x-mpegURL">
+                </video>
+            </div>
+
         </div>
 
     </div>
@@ -127,6 +169,31 @@
         });
 
         var player6 = new MediaElementPlayer('player6', {
+            pauseOtherPlayers: false,
+            features: ['fullscreen'],
+        });
+
+        var player7 = new MediaElementPlayer('player7', {
+            pauseOtherPlayers: false,
+            features: ['fullscreen'],
+        });
+
+        var player8 = new MediaElementPlayer('player8', {
+            pauseOtherPlayers: false,
+            features: ['fullscreen'],
+        });
+
+        var player9 = new MediaElementPlayer('player9', {
+            pauseOtherPlayers: false,
+            features: ['fullscreen'],
+        });
+
+        var player10 = new MediaElementPlayer('player10', {
+            pauseOtherPlayers: false,
+            features: ['fullscreen'],
+        });
+
+        var player11 = new MediaElementPlayer('player11', {
             pauseOtherPlayers: false,
             features: ['fullscreen'],
         });

@@ -5,7 +5,30 @@ body {
   margin: 0;
 }
 
+.topnav {
+  overflow: hidden;
+  background-color: #e9ebee;
+}
 
+.topnav a {
+  float: left;
+  color: #3A3E43;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ffffff;
+  color: #365899;
+}
 
 #div-title{
 	background-color: #4267b2;
@@ -79,7 +102,7 @@ object-fit: fill;
   and (orientation: portrait) {
     #div-report {
 		background-color: #ffffff;
-		width:312px;
+		width:310px;
 		padding:1px;
 		border:1px solid #dddfe2
 	}
