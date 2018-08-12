@@ -54,8 +54,15 @@ body {
 	font-weight: bold;
 }
 
-.cam_video {
-object-fit: fill;
+.msw {
+	color: #222;
+	background-color: #ffffff;
+	text-align: center;
+	padding: 4px;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	border:1px solid #dddfe2;	
 }
 
 /* ----------- iPhone 4 and 4S ----------- */
@@ -107,7 +114,7 @@ object-fit: fill;
 		border:1px solid #dddfe2
 	}
 	.video-size {
-		width:310px !important;
+		width:312px !important;
 	}
 }
 
