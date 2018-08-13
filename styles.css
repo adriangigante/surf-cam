@@ -100,15 +100,15 @@ body {
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
-    #div-report {
-		background-color: #ffffff;
-		width:365px;
-		padding:1px;
-		border:1px solid #dddfe2
-	}
-	.video-size {
-		width:365px !important;
-	} 
+    #header-report{
+      width:365px;
+    }
+    .div-report {
+      width:365px;
+    }
+    .video-size {
+      width:367px !important;
+    }
 }
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
@@ -117,15 +117,15 @@ body {
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
-    #div-report {
-		background-color: #ffffff;
-		width:400px;
-		padding:1px;
-		border:1px solid #dddfe2
-	}
-	.video-size {
-		width:400px !important;
-	}
+    #header-report{
+      width:404px;
+    }
+    .div-report {
+      width:404px;
+    }
+    .video-size {
+      width:406px !important;
+    }
 }
 
 /* ----------- iPhone X ----------- */
@@ -134,15 +134,15 @@ body {
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
-    #div-report {
-		background-color: #ffffff;
-		width:360px;
-		padding:1px;
-		border:1px solid #dddfe2
-	}
-	.video-size {
-		width:360px !important;
-	}
+    #header-report{
+      width:365px;
+    }
+    .div-report {
+      width:365px;
+    }
+    .video-size {
+      width:367px !important;
+    }
 }
 
 /* ----------- Galaxy S3 ----------- */
@@ -152,6 +152,16 @@ body {
   and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 2) 
   and (orientation: portrait) {
+    #header-report{
+      width:310px;
+    }
+    .div-report {
+      width:310px;
+    }
+    .video-size {
+      width:312px !important;
+    }
+}
 
 /* ----------- Galaxy S4, S5 and Note 3 ----------- */
 @media screen 
@@ -159,16 +169,17 @@ body {
   and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 3) 
   and (orientation: portrait) {
-    #div-report {
-		background-color: #ffffff;
-		width:310px;
-		padding:1px;
-		border:1px solid #dddfe2
-	}
-	.video-size {
-		width:310px !important;
-	}
+    #header-report{
+      width:310px;
+    }
+    .div-report {
+      width:310px;
+    }
+    .video-size {
+      width:312px !important;
+    }
 }
+
 
 /* ----------- Galaxy S6 ----------- */
 @media screen 
@@ -176,13 +187,13 @@ body {
   and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 4) 
   and (orientation: portrait) {
-    #div-report {
-		background-color: #ffffff;
-		width:350px;
-		padding:1px;
-		border:1px solid #dddfe2
-	}
-	.video-size {
-		width:350px !important;
-	}
+    #header-report{
+      width:350px;
+    }
+    .div-report {
+      width:350px;
+    }
+    .video-size {
+      width:352px !important;
+    }
 }
