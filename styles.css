@@ -30,15 +30,22 @@ body {
   color: #365899;
 }
 
+#div-container{
+  width: 488px;
+  //margin-left: 200px;
+}
+
 #div-title{
 	background-color: #4267b2;
-	padding-top: 1px;
-	padding-bottom: 1px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+	padding-top: 4px;
+	padding-bottom: 4px;
 	padding-left: 4px;
 }
 
 .div-report {
-  font: 20px;
 	background-color: #ffffff;
 	width:480px;
 	padding:1px;
@@ -83,6 +90,9 @@ body {
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
+    #div-container{
+      width:320px;
+    }
     #header-report{
       width:310px;
     }
@@ -100,6 +110,9 @@ body {
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
+    #div-container{
+      width:375px;
+    }
     #header-report{
       width:365px;
     }
@@ -117,6 +130,9 @@ body {
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
+    #div-container{
+      width:414px;
+    }
     #header-report{
       width:404px;
     }
@@ -134,6 +150,9 @@ body {
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
+    #div-container{
+      width:375px;
+    }
     #header-report{
       width:365px;
     }
@@ -152,6 +171,9 @@ body {
   and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 2) 
   and (orientation: portrait) {
+    #div-container{
+      width:320px;
+    }
     #header-report{
       width:310px;
     }
@@ -169,6 +191,9 @@ body {
   and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 3) 
   and (orientation: portrait) {
+    #div-container{
+      width:320px;
+    }
     #header-report{
       width:310px;
     }
@@ -187,6 +212,9 @@ body {
   and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 4) 
   and (orientation: portrait) {
+    #div-container{
+      width:360px;
+    }
     #header-report{
       width:350px;
     }
