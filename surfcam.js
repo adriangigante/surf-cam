@@ -1,3 +1,4 @@
+
 function initPlayers(){
     var player1 = new MediaElementPlayer('player1', { 
         pauseOtherPlayers: false,
