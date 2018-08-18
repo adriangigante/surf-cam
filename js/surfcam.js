@@ -1,0 +1,93 @@
+function loadSwellnetReport(swellnetURL){
+	var jsonpText = "";
+	jsonpText = $.getJSON(
+		'http://www.whateverorigin.org/get?url=' + encodeURIComponent(swellnetURL) + '&callback=?', 
+		function(data){
+		    var str = null;
+		    str = data.contents.split('Surf:');
+		    if ((str.length) > 1) {
+		    	if (str.includes('Lorem ipsum')){
+		    		$("#report-swellnet" ).html("Lorem ipsum");
+		    	} else {
+			        str = str[1].split('</span>');
+			        str = str[1].split('>');
+			        var surf =  str[1];
+			        //alert(surf);
+
+			        var str = null;
+			        str = data.contents.split('Winds:');
+			        str = str[1].split('</span>');
+			        str = str[1].split('>');
+			        var winds = str[1];
+			        //alert(winds);
+			        
+			        var str = null;
+			        str = data.contents.split('Weather:');
+			        str = str[1].split('</span>');
+			        str = str[1].split('>');
+			        var weather = str[1];
+			        //alert(weather);
+
+			        var str = null;
+			        str = data.contents.split('Rating:');
+			        str = str[1].split('</span>');
+			        str = str[1].split('>');
+			        var rating = str[1];
+			        //alert(rating);
+
+			        var str = null;
+			        str = data.contents.split('views-field views-field-body');
+			        str = str[1].split('<p>');
+			        str = str[1].split('</p>');
+			        var report = str[0];
+			        //alert(report);
+
+			        var fullReport = 
+			            "Surf: " + surf + "<br>" +
+			            "Winds: " + winds + "<br>" +
+			            "Weather: " + weather + "<br>" +
+			            "Rating: " + rating + "<br>" +
+			            report;
+			        //alert(fullReport);
+			        $("#report-swellnet" ).html(fullReport);
+			    }
+		    } else {
+		        $("#report-swellnet" ).html("Too early! Nothing to report yet.");
+		    }
+
+		}
+	)
+}
+
+function loadCoastalwatchReport(coastalwatchURL){
+	var jsonpText = "";
+	jsonpText = $.getJSON(
+		'http://www.whateverorigin.org/get?url=' + encodeURIComponent(coastalwatchURL) + '&callback=?', 
+		function(data){
+		    var str = null;
+		    str = data.contents.split('s rating - <strong> ');
+		    if ((str.length) > 1) {
+
+		        str = str[1].split(' </');
+		        var rating = str[0];
+		        //alert('Rating: ' + rating);
+
+		        str = str[1].split('Bottom">');
+		        var report = str[1].split('<')[0].trim();
+		        //alert('Report: ' + report);
+
+		        var fullReport = 
+		            "Rating: " + rating + "<br>" +
+		            report;		        
+
+		        $("#report-coastalwatch" ).html(fullReport);
+
+		    } else {
+
+		        $("#report-coastalwatch" ).html("Too early! Nothing to report yet.");
+
+		    }
+
+		}
+	)
+}
