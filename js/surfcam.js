@@ -6,8 +6,8 @@ function loadSwellnetReport(swellnetURL){
 		    var str = null;
 		    str = data.contents.split('Surf:');
 		    if ((str.length) > 1) {
-		    	if (str.includes('Lorem ipsum')){
-		    		$("#report-swellnet" ).html("Lorem ipsum");
+		    	if (str[1].includes('Lorem ipsum')){
+		    		$("#report-swellnet" ).html("Daily surf reports are exclusive to Swellnet Pro subscribers until 9am");
 		    	} else {
 			        str = str[1].split('</span>');
 			        str = str[1].split('>');
