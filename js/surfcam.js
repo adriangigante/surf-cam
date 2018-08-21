@@ -76,7 +76,23 @@ function loadCoastalwatchReport(coastalwatchURL){
 		        var report = str[1].split('<')[0].trim();
 		        //alert('Report: ' + report);
 
-		        var fullReport = 
+		        str = data.contents.split('<strong class="val">');
+		        var surf = str[1].split('</strong>')[0] + ' ' + str[1].split('<span class="dir">')[1].split('</span>')[0] + str[1].split('<span>')[1].split('</span>')[0];
+		        //alert(surf);
+
+		        str = data.contents.split('<strong class="val">');
+		        var winds = str[2].split('</strong>')[0] + ' ' + str[2].split('<span class="dir">')[1].split('</span>')[0];
+		        //alert(winds);
+
+		        str = data.contents.split('<div class="floatLeft report water">');
+		        var water = str[1].split('>')[1].split('<')[0];
+		        //alert(water);
+		        		        
+
+		        var fullReport =
+		        	"Surf: " + surf + "<br>" +
+		        	"Winds: " + winds + "<br>" +
+		        	"Water: " + water + "<br>" + 
 		            "Rating: " + rating + "<br>" +
 		            report;		        
 
