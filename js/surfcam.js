@@ -1,7 +1,7 @@
 function loadSwellnetReport(swellnetURL){
 	var jsonpText = "";
 	jsonpText = $.getJSON(
-		'http://cors-proxy.surf-cam.svc/' + swellnetURL, 
+		'cors-proxy.surf-cam.svc:8080/' + swellnetURL, 
 		function(data){
 		    var str = null;
 		    str = data.contents.split('Surf:');
@@ -62,7 +62,7 @@ function loadSwellnetReport(swellnetURL){
 function loadCoastalwatchReport(coastalwatchURL){
 	var jsonpText = "";
 	jsonpText = $.getJSON(
-		'http://cors-proxy.surf-cam.svc/' + coastalwatchURL, 
+		'cors-proxy.surf-cam.svc:8080/' + coastalwatchURL, 
 		function(data){
 		    var str = null;
 		    str = data.contents.split('s rating - <strong> ');
