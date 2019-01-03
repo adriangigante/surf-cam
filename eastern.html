@@ -36,7 +36,7 @@
 
   </head>
 
-  <body class="bg-light">
+  <body class="bg-light" onLoad="includeHTML();">
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary d-flex justify-content-start">
       <a class="navbar-brand" href="eastern.html">Surf Cam</a>
@@ -47,11 +47,8 @@
     <main role="main" class="container">
       <div class="my-3 p-3 bg-white rounded box-shadow">
         <h6 class="border-bottom border-gray pb-2 mb-0">SWELLNET.COM</h6>
-        <div class="media text-muted pt-3">
-          <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
-          <p id="report-swellnet" class="media-body pb-3 mb-0 lh-125 border-bottom border-gray">
-            Loading report...
-          </p>
+        <div w3-include-html="data/swellnet.com-reports-australia-new-south-wales-eastern-beaches" class="media text-muted pt-3">
+         
         </div>
 
       </div> 
@@ -80,8 +77,8 @@
       </div>
 
       <script>
-        loadSwellnetReport('http://www.swellnet.com/reports/australia/new-south-wales/eastern-beaches');
-        loadCoastalwatchReport('https://www.coastalwatch.com/surf-cams-surf-reports/nsw/bondi-beach');
+        //loadSwellnetReport('http://www.swellnet.com/reports/australia/new-south-wales/eastern-beaches');
+        //loadCoastalwatchReport('https://www.coastalwatch.com/surf-cams-surf-reports/nsw/bondi-beach');
       </script>
 
       <div class="my-3 p-3 bg-white rounded box-shadow" style="max-width: 500px;">
