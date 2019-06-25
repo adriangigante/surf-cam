@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /css
+Disallow: /data
+Disallow: /image
+Disallow: /js
+
+Sitemap: https://surfcam.tk/sitemap.xml
