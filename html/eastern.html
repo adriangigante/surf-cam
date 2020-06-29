@@ -121,15 +121,23 @@
           </video>
         </div>
         <br>
-        <h6 class="border-bottom border-gray pb-2 mb-0">Maroubra South</h6>
-        <iframe src="https://player.castr.io/live_9b3f6d3010bd11ea89b501c05026fa09" title="Maroubra Beach - North live cam stream" width="100%" height="380" frameborder="0" scrolling="no" allow="autoplay" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+        <div class="embed-responsive">
+          <h6 class="border-bottom border-gray pb-2 mb-0">Maroubra North</h6>
+          <video id="my_video_5" class="video-js vjs-default-skin" controls muted preload="auto">
+            <source src="https://randwickcc-hls.secdn.net/randwickcc-channel/play/maroubra_north/playlist.m3u8" type='application/x-mpegURL'>
+          </video>
+        </div>
         <br>
-        <br>
-        <h6 class="border-bottom border-gray pb-2 mb-0">Maroubra North</h6>
-        <iframe src="https://player.castr.io/live_38e7d2c0f94411e9b18fc7b669fdf9f8" title="Maroubra Beach - South live cam stream" width="100%" height="380" frameborder="0" scrolling="no" allow="autoplay" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+        <div class="embed-responsive">
+          <h6 class="border-bottom border-gray pb-2 mb-0">Maroubra South</h6>
+          <video id="my_video_6" class="video-js vjs-default-skin" controls muted preload="auto">
+            <source src="https://vse-oc-all0.secdn.net/randwickcc-channel/play/maroubra_south/playlist.m3u8" type='application/x-mpegURL'>
+          </video>
+        </div>
+        <br>        
       </div>
 
-      <script>initVideoJS(4);</script>
+      <script>initVideoJS(6);</script>
 
     </main>
 
