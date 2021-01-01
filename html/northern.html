@@ -49,7 +49,7 @@
 
   </head>
 
-  <body class="bg-light" onLoad="includeHTML();">
+  <body class="bg-dark" onLoad="includeHTML();">
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary d-flex justify-content-start">
       <a class="navbar-brand" href="eastern.html">SurfCam.tk</a>
@@ -58,9 +58,16 @@
     </nav>
 
     <main role="main" class="container">
-      <div class="my-3 p-3 bg-white rounded box-shadow">
 
-        <h6 class="border-bottom border-gray pb-2 mb-0">COASTALWATCH.COM</h6>
+      <div>
+        <br>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#reports" aria-expanded="false" aria-controls="reports">
+          SURF REPORTS
+        </button>
+      </div>
+
+      <div class="my-3 p-3 bg-secondary rounded box-shadow collapse" id="reports">
+        <h7 class="text-light">COASTALWATCH.COM</h7>
         <div class="media text-muted pt-3">
           <!-- BEGIN-COASTAL !-->Lorem ipsum<!-- END-COASTAL !-->
         </div>
@@ -69,8 +76,7 @@
         <br>
         <br>
         <br>     
-
-        <h6 class="border-bottom border-gray pb-2 mb-0">SWELLNET.COM</h6>
+        <h7 class="text-light">SWELLNET.COM</h7>
         <div class="media text-muted pt-3">
           <!-- BEGIN-SWELLNET !-->Lorem ipsum<!-- END-SWELLNET !-->
         </div>
@@ -79,8 +85,7 @@
         <br>
         <br>
         <br>
-          
-        <h6 class="border-bottom border-gray pb-2 mb-0">MAGICSEAWEED.COM</h6>
+        <h7 class="text-light">MAGICSEAWEED.COM</h7>
         <div class="media text-muted pt-3">
           <a href="https://magicseaweed.com/Sydney-Manly-Surf-Report/526/" target="_blank">MANLY</a>
         </div>
@@ -88,98 +93,55 @@
 
       </div>
 
-      <div class="my-3 p-3 bg-white rounded box-shadow" style="max-width: 500px;">
+      <div class="my-3 p-3 bg-secondary rounded box-shadow" style="max-width: 500px;">
         <div class="embed-responsive">
-          <h6 class="border-bottom border-gray pb-2 mb-0">Manly</h6>
+          <h6 class="text-light">MANLY</h6>
           <video id="my_video_1" class="video-js vjs-default-skin" controls muted preload="auto">
             <source src="https://streamer.swellnet.com.au/surfcams/manly.stream/playlist.m3u8" type='application/x-mpegURL'>
           </video>
-        </div>
-        <br>
-        <div class="embed-responsive">
-          <h6 class="border-bottom border-gray pb-2 mb-0">Manly - Fairy Bower</h6>
           <video id="my_video_2" class="video-js vjs-default-skin" controls muted preload="auto">
             <source src="https://cams.cdn-surfline.com/cdn-au/au-manlyfairy/playlist.m3u8" type='application/x-mpegURL'>
           </video>
-        </div>
-        <br>
-        <div class="embed-responsive">
-          <h6 class="border-bottom border-gray pb-2 mb-0">Manly - Hotel Steyne</h6>
           <video id="my_video_3" class="video-js vjs-default-skin" controls muted preload="auto">
             <source src="https://cams.cdn-surfline.com/cdn-au/au-manlyhotel/playlist.m3u8" type='application/x-mpegURL'>
           </video>
-        </div>
-        <br>
-        <div class="embed-responsive">
-          <h6 class="border-bottom border-gray pb-2 mb-0">Manly - North Steyne</h6>
           <video id="my_video_4" class="video-js vjs-default-skin" controls muted preload="auto">
             <source src="https://cams.cdn-surfline.com/cdn-au/au-manlynorth/playlist.m3u8" type='application/x-mpegURL'>
           </video>
-         </div>
-      </div>
-
       <!-- <div class="my-3 p-3 bg-white rounded box-shadow" style="max-width: 500px;">
         <div class="embed-responsive">
-          <h6 class="border-bottom border-gray pb-2 mb-0">Freshwater</h6>
+          <h6 class="text-light">Freshwater</h6>
             <img style="width:480px" src='https://surfcam.tk:54017/stream' class="video-size"/>
          </div>
       </div> -->
-
-      <div class="my-3 p-3 bg-white rounded box-shadow" style="max-width: 500px;">
-        <div class="embed-responsive">
-          <h6 class="border-bottom border-gray pb-2 mb-0">Curl Curl</h6>
+          <p></p>
+          <h6 class="text-light">CURL CURL</h6>
           <video id="my_video_5" class="video-js vjs-default-skin" controls muted preload="auto">
             <source src="https://cams.cdn-surfline.com/cdn-au/au-curlcurl/chunklist.m3u8" type='application/x-mpegURL'>
           </video>
-         </div>
-      </div>
-
-      <div class="my-3 p-3 bg-white rounded box-shadow" style="max-width: 500px;">
-        <div class="embed-responsive">
-          <h6 class="border-bottom border-gray pb-2 mb-0">Dee Why</h6>
+          <p></p>
+          <h6 class="text-light">DEE WHY</h6>
           <video id="my_video_6" class="video-js vjs-default-skin" controls muted preload="auto">
             <source src="https://cams.cdn-surfline.com/cdn-au/au-deewhy/chunklist.m3u8" type='application/x-mpegURL'>
           </video>
-         </div>
-      </div>
-
-      <div class="my-3 p-3 bg-white rounded box-shadow" style="max-width: 500px;">
-        <div class="embed-responsive">
-          <h6 class="border-bottom border-gray pb-2 mb-0">Narrabeen - South</h6>
+          <p></p>
+          <h6 class="text-light">NARRABEAN</h6>
           <video id="my_video_7" class="video-js vjs-default-skin" controls muted preload="auto">
             <source src="https://cams.cdn-surfline.com/cdn-au/au-narrabeensouth/playlist.m3u8" type='application/x-mpegURL'>
           </video>
-         </div>
-      </div>
-
-      <div class="my-3 p-3 bg-white rounded box-shadow" style="max-width: 500px;">
-        <div class="embed-responsive">
-          <h6 class="border-bottom border-gray pb-2 mb-0">Narrabeen I</h6>
           <video id="my_video_8" class="video-js vjs-default-skin" controls muted preload="auto">
             <source src="https://cams.cdn-surfline.com/cdn-au/au-narrabeen/playlist.m3u8" type='application/x-mpegURL'>
           </video>
-        </div>
-        <br>
-        <div class="embed-responsive">
-          <h6 class="border-bottom border-gray pb-2 mb-0">Narrabeen II</h6>
           <video id="my_video_9" class="video-js vjs-default-skin" controls muted preload="auto">
             <source src="https://streamer.swellnet.com.au/surfcams/narrabeen.stream/playlist.m3u8" type='application/x-mpegURL'>
           </video>
-         </div>
-      </div>
-
-      <div class="my-3 p-3 bg-white rounded box-shadow" style="max-width: 500px;">
-        <div class="embed-responsive">
-          <h6 class="border-bottom border-gray pb-2 mb-0">Avalon</h6>
+          <p></p>
+          <h6 class="text-light">AVALON</h6>
           <video id="my_video_10" class="video-js vjs-default-skin" controls muted preload="auto">
             <source src="https://cams.cdn-surfline.com/cdn-au/au-avalon/chunklist.m3u8" type='application/x-mpegURL'>
           </video>
-         </div>
-      </div>
-
-      <div class="my-3 p-3 bg-white rounded box-shadow" style="max-width: 500px;">
-        <div class="embed-responsive">
-          <h6 class="border-bottom border-gray pb-2 mb-0">Palm Beach</h6>
+          <p></p>
+          <h6 class="text-light">PALM BEACH</h6>
           <video id="my_video_11" class="video-js vjs-default-skin" controls muted preload="auto">
             <source src="https://cams.cdn-surfline.com/cdn-au/au-palmbeachnsw/playlist.m3u8" type='application/x-mpegURL'>
           </video>

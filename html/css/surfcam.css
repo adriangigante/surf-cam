@@ -9,7 +9,7 @@ body {
   color: #A6B8E1;
   margin-left: 8px;
   margin-right: 8px;
-  background-color: #4267b2;
+  background-color: #273C74;
 }
 
 .surfcam-nav-link:hover {
@@ -27,7 +27,7 @@ body {
 }
 
 #div-title{
-	background-color: #4267b2;
+	background-color: #273C74;
   color: white;
   font-size: 24px;
   font-weight: bold;
@@ -44,7 +44,7 @@ body {
 }
 
 #header-report{
-	background-color: ##f6f7f9;
+	background-color: #f6f7f9;
 	width:480px;
 	padding:1px;
 	border:1px solid #dddfe2;
